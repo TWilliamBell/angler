@@ -11,7 +11,7 @@
 #' zeroSShDLM(Coords, Sex)
 
 zeroSShDLM <- function(Coords, Sex) {
-  Sex <- sample(SexVec, length(Sex))
+  Sex <- sample(Sex, length(Sex))
   NullSShD <- SShDLM(Coords, Sex, Zeroed = F)
   NullSShD
 }
