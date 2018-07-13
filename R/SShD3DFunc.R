@@ -30,7 +30,7 @@ SShD3DFunc <- function(Coords, Sex, Zeroed = TRUE) {
   SShD <- euclidean(DiffFM)
 
   if (isTRUE(Zeroed)) {
-    Zero <- replicate(1000, zero3DSShD(Coords, SexVec))
+    Zero <- replicate(1000, zero3DSShD(Coords, Sex))
     return(SShD-mean(Zero))
   }
 
