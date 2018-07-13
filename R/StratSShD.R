@@ -5,6 +5,8 @@
 #' @param Sex A character or factor vector recording sex for each individual as 'm' or 'f'
 #' @param Zeroed a logical value stating whether you wish to correct the SShD for the variation among individuals regardless of sex (defaults to TRUE)
 #'
+#' @export
+#'
 #' @examples
 #' StratSShD(Strata, Coords, Sex, T)
 #' StratSShD(Strata, Coords, Sex, Zeroed = FALSE)

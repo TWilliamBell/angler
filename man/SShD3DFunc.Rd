@@ -4,12 +4,12 @@
 \alias{SShD3DFunc}
 \title{Calculating Sexual Shape Dimorphism}
 \usage{
-SShD3DFunc(Coords, SexVec, Zeroed = TRUE)
+SShD3DFunc(Coords, Sex, Zeroed = TRUE)
 }
 \arguments{
-\item{Coords}{three-dimensional array of coordinates from geometric morphometric analysis (see gpagen() in geomorph for correct formatting)}
+\item{Coords}{Three-dimensional array of coordinates from geometric morphometric analysis (see gpagen() in geomorph for correct formatting)}
 
-\item{SexVec}{character vector of individual's sexes given as 'f' for female and 'm' for male}
+\item{Sex}{A character or factor vector recording sex for each individual as 'm' or 'f'}
 
 \item{Zeroed}{a logical value stating whether you wish to correct the SShD for the variation among individuals regardless of sex (defaults to TRUE)}
 }

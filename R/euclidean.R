@@ -1,6 +1,8 @@
 #' Euclidean Norm
-#' 
+#'
 #' The way you calculate distances in R^n, aka the square root of the sum of squares.
+#'
+#' @export
 #'
 #' @param vector numerical vector of numbers
 #'

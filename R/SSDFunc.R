@@ -5,6 +5,8 @@
 #' @param Size A numerical vector giving the size of each individual as a scalar quantity
 #' @param Sex character or factor vector of individual's sexes given as 'f' for female and 'm' for male
 #'
+#' @export
+#'
 #' @examples
 #' SSDFunc(Size, Sex)
 

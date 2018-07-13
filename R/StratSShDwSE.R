@@ -7,6 +7,8 @@
 #' @param print.progress A logical vector, if TRUE, updates you on the progress of your bootstraps
 #' @param ... rep can be used to change the number of resamplings done for the Bootstraps, and Zeroed can be passed to SShDLM()
 #'
+#' @export
+#'
 #' @examples
 #' StratSShDwSE(Strata, Coords, Sex, Size = NULL, print.progress = TRUE, rep = 1000, Zeroed = FALSE)
 

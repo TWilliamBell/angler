@@ -4,10 +4,10 @@
 \alias{ConvertSexFormat}
 \title{Convert Sex Data to format used by our Functions}
 \usage{
-ConvertSexFormat(SexVec, female.string = "F", male.string = "M")
+ConvertSexFormat(Sex, female.string = "F", male.string = "M")
 }
 \arguments{
-\item{SexVec}{A character or factor vector (vector produced will be the same type) that includes the sex of each individual.}
+\item{Sex}{A character or factor vector (vector produced will be the same type) that includes the sex of each individual.}
 
 \item{female.string}{How sex for females is recorded currently (defaults to "F").}
 

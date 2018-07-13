@@ -7,17 +7,19 @@
 #' @param Base the base for the logarithm (defaults to e = 2.718...)
 #' @param positiveF Smith 1999 has the log ratio with male biased being positive and female biased being negative (suited to mammalian research), can reverse that by setting this to TRUE
 #'
+#' @export
+#'
 #' @examples
 #' SSDLog(Size, Sex)
 
 SSDLog <- function(Size, Sex, Base = exp(1), positiveF = F) {
   Sex <- as.character(Sex)
-  
+
   if (!is.element("m", Sex) | !is.element("f", Sex)) {
     return(NA_real_)
     warning("No data found for at least one sex.")
   }
-  
+
   MSize <- mean(Size[Sex == 'm'])
   FSize <- mean(Size[Sex == 'f'])
   if (!isTRUE(positiveF)) {

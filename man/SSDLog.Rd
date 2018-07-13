@@ -4,12 +4,12 @@
 \alias{SSDLog}
 \title{Sexual Size Dimorphism Calculator}
 \usage{
-SSDLog(SizeVec, SexVec, Base = exp(1), positiveF = F)
+SSDLog(Size, Sex, Base = exp(1), positiveF = F)
 }
 \arguments{
-\item{SizeVec}{some numerical size measure given as a scalar quantity}
+\item{Size}{A numerical vector giving the size of each individual as a scalar quantity}
 
-\item{SexVec}{sex values given either as a vector of characters or factors, must be formatted as 'f' for female or 'm' for male}
+\item{Sex}{A character or factor vector recording sex for each individual as 'm' or 'f'}
 
 \item{Base}{the base for the logarithm (defaults to e = 2.718...)}
 
@@ -19,5 +19,5 @@ SSDLog(SizeVec, SexVec, Base = exp(1), positiveF = F)
 Calculates the log ratio of sexual dimorphism, log(M/F) (Smith 1999).  For the SDI (Lovich and Gibbons 1992), use SSDFunc().  Defaults to e as the base for the logarithm.
 }
 \examples{
-SSD(Size, Sex)
+SSDLog(Size, Sex)
 }

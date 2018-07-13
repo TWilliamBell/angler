@@ -4,12 +4,12 @@
 \alias{SShDFast}
 \title{Calculating Sexual Shape Dimorphism Fast}
 \usage{
-SShDFast(Coords, SexVec)
+SShDFast(Coords, Sex)
 }
 \arguments{
-\item{Coords}{two-dimensional array of coordinates from geometric morphometric analysis (see two.d.array() in geomorph for correct formatting)}
+\item{Coords}{Two-dimensional array of coordinates from geometric morphometric analysis (see two.d.array() in geomorph for correct formatting)}
 
-\item{SexVec}{character vector of individual's sexes given as 'f' for female and 'm' for male}
+\item{Sex}{A character or factor vector recording sex for each individual as 'm' or 'f'}
 }
 \description{
 This function directly calculates SShD in the fastest manner (accuracy lost).

@@ -21,7 +21,6 @@ StratSSD(Strata, Size, Sex, Log = FALSE, ...)
 Within-Group SSD Calculation
 }
 \examples{
-StratSSD(Strata, Size, Sex)
 StratSSD(Strata, Size, Sex, Log = TRUE)
 StratSSD(Strata, Size, Sex, Log = TRUE, positiveF = TRUE, base = 2)
 }

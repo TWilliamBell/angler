@@ -6,6 +6,8 @@
 #' @param Log Defaults to FALSE, in which case you use the Lovich and Gibbons SDI to calculate SSD, if changed to TRUE you use the log ratio.
 #' @param ... If Log is TRUE, then you may pass arguments to the SSDLog function this way.
 #'
+#' @export
+#'
 #' @examples
 #' StratSSD(Strata, Size, Sex, Log = TRUE)
 #' StratSSD(Strata, Size, Sex, Log = TRUE, positiveF = TRUE, base = 2)

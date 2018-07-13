@@ -4,16 +4,16 @@
 \alias{SSDFunc}
 \title{Sexual Size Dimorphism Calculator}
 \usage{
-SSDFunc(SizeVec, SexVec)
+SSDFunc(Size, Sex)
 }
 \arguments{
-\item{SizeVec}{some numerical size measure given as a scalar quantity}
+\item{Size}{A numerical vector giving the size of each individual as a scalar quantity}
 
-\item{SexVec}{sex values given either as a vector of characters or factors, must be formatted as 'f' for female or 'm' for male}
+\item{Sex}{character or factor vector of individual's sexes given as 'f' for female and 'm' for male}
 }
 \description{
 Calculates the SDI measure of sexual size dimorphism (Lovich and Gibbons 1992).  In order to calculate the log ratio instead use SSDLog.
 }
 \examples{
-SSD(Size, Sex)
+SSDFunc(Size, Sex)
 }

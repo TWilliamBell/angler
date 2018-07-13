@@ -1,3 +1,5 @@
+#' @export
+
 PrintProgress <- function(i, n) {
   if (i%%10 == 1 & i != 11) {
     cat("Completed the ", i, "st out of ", n, " levels.\n", sep = "")
