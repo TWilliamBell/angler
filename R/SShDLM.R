@@ -17,7 +17,7 @@ SShDLM <- function(Coords, Sex, Zeroed = T) {
 
   Data <- data.frame(Sex)
   Data$Coords <- Coords
-  LM <- lm(Coords ~ Sex + 1, data = Data)
+  LM <- lm(Coords ~ 1 + Sex, data = Data)
   DiffFM <- LM$coef[2, ]
   SShD <- euclidean(DiffFM)
   if (isTRUE(Zeroed)) {
