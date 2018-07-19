@@ -5,7 +5,6 @@
 #' @param Strata a character or factor vector giving the factor by which we wish to divide individuals into groups before calculating SSD
 #' @param rep number of times to perform the resampling procedure
 #'
-#' @return
 #' @export
 
 StratSSDBoot <- function(Size, Sex, Strata, rep = 1000) {
