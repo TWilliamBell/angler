@@ -13,10 +13,10 @@ SSDLog(Size, Sex, Base = exp(1), positiveF = F)
 
 \item{Base}{the base for the logarithm (defaults to e = 2.718...)}
 
-\item{positiveF}{Smith 1999 has the log ratio with male biased being positive and female biased being negative (suited to mammalian research), can reverse that by setting this to TRUE}
+\item{positiveM}{Smith 1999 has the log ratio with male biased being positive and female biased being negative (suited to mammalian research), can have the statistic operate in that manner by setting this to TRUE}
 }
 \description{
-Calculates the log ratio of sexual dimorphism, log(M/F) (Smith 1999).  For the SDI (Lovich and Gibbons 1992), use SSDFunc().  Defaults to e as the base for the logarithm.
+Calculates the log ratio of sexual dimorphism, log(F/M) (adapted with alterations from Smith 1999).  For the SDI (Lovich and Gibbons 1992), use SSDFunc().  Defaults to e as the base for the logarithm.
 }
 \examples{
 SSDLog(Size, Sex)
