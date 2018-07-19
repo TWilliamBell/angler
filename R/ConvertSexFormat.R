@@ -12,7 +12,6 @@
 
 ConvertSexFormat <- function(Sex, female.string = "F", male.string = "M") {
 
-  isFACTOR <- is.factor(Sex)
   Sex <- as.character(Sex)
 
   for (i in 1:length(Sex)) {
@@ -25,9 +24,6 @@ ConvertSexFormat <- function(Sex, female.string = "F", male.string = "M") {
     else {cat(paste("Cannot convert the ", i, "th term to the standardized format, \nconvert manually?"))}
   }
 
-  if (isTRUE(isFACTOR)) {
-    Sex <- as.factor(Sex)
-  }
-
+  Sex <- as.factor(Sex)
   Sex
 }
