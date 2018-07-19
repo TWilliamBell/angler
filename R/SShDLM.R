@@ -21,8 +21,8 @@ SShDLM <- function(Coords, Sex, Zeroed = T) {
   DiffFM <- LM$coef[2, ]
   SShD <- euclidean(DiffFM)
   if (isTRUE(Zeroed)) {
-    zero <- zeroSShDLM(Coords, Sex)
-    return(SShD-mean(zero))
+    Zero <- replicate(1000, zeroSShDLM(Coords, Sex))
+    return(SShD-mean(Zero))
   }
   SShD
 }
