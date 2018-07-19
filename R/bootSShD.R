@@ -19,7 +19,8 @@ bootSShD <- function(Coords, Sex, Size = NULL, Zeroed = T) { ## Hoping to make t
     nM <- sum(Male)
     BootF <- sample(FemaleIndices, size = nF, replace = T)
     BootM <- sample(MaleIndices, size = nM, replace = T)
-    CoordArray <- array(dim = dim(Coords))
+    Dim <- dim(Coords)
+    CoordArray <- matrix(nrow = Dim[1], ncol = Dim[2])
     CoordArray[1:nF, ] <- Coords[BootF, , drop = F]
     CoordArray[(nF+1):n, ] <- Coords[BootM, , drop = F]
     SexVec <- c(rep('f', nF), rep('m', nM))
