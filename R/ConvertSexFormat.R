@@ -10,7 +10,7 @@
 #' data(pupfish) ## In geomorph.
 #' ConvertSexFormat(pupfish$Sex)
 
-ConvertSexFormat <- function(Sex, female.string = "F", male.string = "M") {
+convert.sex.format <- function(Sex, female.string = "F", male.string = "M") {
 
   Sex <- as.character(Sex)
 
