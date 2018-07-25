@@ -17,9 +17,9 @@ StratSShDwSE <- function(Strata, Coords, Sex, Size = NULL, print.progress = TRUE
   Sex <- as.character(Sex)
   n <- length(Factors)
   if (is.null(Size)) {
-    spots <- 4
+    spots <- 2
     }
-  else { spots <- 2 }
+  else { spots <- 4 }
   SShDs <- rep(list(rep(NA_real_, spots)), n)
   for (i in 1:n) {
     level <- Factors[i]
