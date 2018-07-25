@@ -2,26 +2,22 @@
 % Please edit documentation in R/StratSShDwSE.R
 \name{StratSShDwSE}
 \alias{StratSShDwSE}
-\title{Within-Group SShD and SSD Calculation with Standard Error (via Bootstrap)}
+\title{Calculate stratified Standard Errors for SShD and SSD}
 \usage{
-StratSShDwSE(Strata, Coords, Sex, Size = NULL, print.progress = TRUE, ...)
+StratSShDwSE(Coords, Sex, Size, Strata, rep = 1000, print.progress = T,
+  logSSD = F, ...)
 }
 \arguments{
-\item{Strata}{A character or factor vector giving the factor by which we wish to divide individuals into groups before calculating SShD and SSD}
-
 \item{Coords}{Two-dimensional array of coordinates from geometric morphometric analysis (see two.d.array() in geomorph for correct formatting)}
 
 \item{Sex}{A character or factor vector recording sex for each individual as 'm' or 'f'}
 
 \item{Size}{A numerical vector giving the size of each individual as a scalar quantity}
 
-\item{print.progress}{A logical vector, if TRUE, updates you on the progress of your bootstraps}
+\item{Strata}{A character or factor vector giving the factor by which we wish to divide individuals into groups before calculating SShD and SSD}
 
-\item{...}{rep can be used to change the number of resamplings done for the Bootstraps, and Zeroed can be passed to SShDLM()}
+\item{rep}{Number of resamplings you wish to do}
 }
 \description{
-Within-Group SShD and SSD Calculation with Standard Error (via Bootstrap)
-}
-\examples{
-StratSShDwSE(Strata, Coords, Sex, Size = NULL, print.progress = TRUE, rep = 1000, Zeroed = FALSE)
+Calculate stratified Standard Errors for SShD and SSD
 }

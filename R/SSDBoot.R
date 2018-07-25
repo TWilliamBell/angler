@@ -6,5 +6,6 @@ SSDBoot <- function(Sex, Indices, Size, log = F, ...) { ## Bootstrap statistic f
   }
   else {
     SSD <- SSDLog(Size[Indices], Sex[Indices], ...)
+  }
   SSD
 }

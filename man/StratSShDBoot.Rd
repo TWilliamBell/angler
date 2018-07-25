@@ -4,7 +4,7 @@
 \alias{StratSShDBoot}
 \title{Standard Error of SShD}
 \usage{
-StratSShDBoot(Coords, Sex, NonSexFactor, rep = 1000)
+StratSShDBoot(Coords, Sex, NonSexFactor, rep = 1000, print.progress = T)
 }
 \arguments{
 \item{Coords}{Two-dimensional array of coordinates from geometric morphometric analysis (see two.d.array() in geomorph for correct formatting)}

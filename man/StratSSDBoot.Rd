@@ -4,7 +4,7 @@
 \alias{StratSSDBoot}
 \title{Stratified Standard Error calculator for SSD}
 \usage{
-StratSSDBoot(Size, Sex, Strata, rep = 1000)
+StratSSDBoot(Size, Sex, Strata, rep = 1000, log = F, ...)
 }
 \arguments{
 \item{Size}{a numerical vector giving the size of each individual as a scalar quantity}
