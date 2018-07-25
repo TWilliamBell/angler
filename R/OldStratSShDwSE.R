@@ -12,7 +12,7 @@
 #' @examples
 #' StratSShDwSE(Strata, Coords, Sex, Size = NULL, print.progress = TRUE, rep = 1000, Zeroed = FALSE)
 
-StratSShDwSE <- function(Strata, Coords, Sex, Size = NULL, print.progress = TRUE, ...) {
+OldStratSShDwSE <- function(Strata, Coords, Sex, Size = NULL, print.progress = TRUE, ...) {
   Factors <- levels(Strata)
   Sex <- as.character(Sex)
   n <- length(Factors)
