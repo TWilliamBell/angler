@@ -12,6 +12,6 @@ StratBootSShDSSD <- function(Coords, Sex, Size, Strata, rep = 1000) {
   ## Does SShD and SSD bootstraps
   SShD <- StratSShDBoot(Coords, Sex, Strata, rep)
   SSD <- StratSSDBoot(Size, Sex, Strata, rep)
-  Results <- data.frame(Factors = SShD$Factors, SShD.SE = SShD$SShD.SE, SSD.SE = SSD$SSD.SE)
+  Results <- data.frame(Factors = SShD$Factors, SShD.Mean = SShD$SShD.Mean, SShD.SE = SShD$SShD.SE, SSD.Mean = SSD$SSD.Mean, SSD.SE = SSD$SSD.SE)
   Results
 }
