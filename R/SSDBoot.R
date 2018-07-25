@@ -1,6 +1,6 @@
 #' @export
 
-SSDBoot <- function(Sex, Indices, Size, SSDlog = F, ...) { ## Bootstrap statistic for SSD
+SSDBoot <- function(Sex, Indices, Size, log = F, ...) { ## Bootstrap statistic for SSD
   if (!isTRUE(log)) {
     SSD <- SSDLM(Size[Indices], Sex[Indices])
   }
