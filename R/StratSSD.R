@@ -18,7 +18,7 @@ StratSSD <- function(Strata, Size, Sex, Log = FALSE, ...) {
   for (i in 1:length(Levels)) {
     level <- Levels[i]
     if (Log == FALSE) {
-      SSDs[i] <- SSDFunc(Size[Strata == level], Sex[Strata == level])
+      SSDs[i] <- SSDLM(Size[Strata == level], Sex[Strata == level])
     }
     else if (Log == TRUE) {
       SSDs[i] <- SSDLog(Size[Strata == level], Sex[Strata == level], ...)
