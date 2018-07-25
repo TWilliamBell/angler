@@ -1,6 +1,6 @@
 #' @export
 
 SSDBoot <- function(Sex, Indices, Size) { ## Bootstrap statistic for SSD
-  SSD <- SSDFunc(Size[Indices], Sex[Indices])
+  SSD <- SSDLM(Size[Indices], Sex[Indices])
   SSD
 }
