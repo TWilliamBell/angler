@@ -16,7 +16,11 @@ StratSShDwSE <- function(Strata, Coords, Sex, Size = NULL, print.progress = TRUE
   Factors <- levels(Strata)
   Sex <- as.character(Sex)
   n <- length(Factors)
-  SShDs <- list()
+  if (is.null(Size)) {
+    spots <- 4
+    }
+  else { spots <- 2 }
+  SShDs <- rep(list(rep(NA_real_, spots)), n)
   for (i in 1:n) {
     level <- Factors[i]
     StratCoord <- Coords[Strata == level, , drop = F]
@@ -31,10 +35,10 @@ StratSShDwSE <- function(Strata, Coords, Sex, Size = NULL, print.progress = TRUE
     }
   }
   Results <- data.frame(Factors)
-  Results$Boot.SShD <- nthelementoflists(SShDs, 1)
+  Results$SShD.Mean <- nthelementoflists(SShDs, 1)
   Results$SShD.SE <- nthelementoflists(SShDs, 2)
   if (!is.null(Size)) {
-    Results$Boot.SSD <- nthelementoflists(SShDs, 3)
+    Results$SSD.Mean <- nthelementoflists(SShDs, 3)
     Results$SSD.SE <- nthelementoflists(SShDs, 4)
   }
   Results
