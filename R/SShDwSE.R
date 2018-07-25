@@ -24,9 +24,9 @@ SShDwSE <- function(Coords, Sex, Size = NULL, rep = 1000, ...) {
     SShD <- mean(Boot)
     SShD.SE <- sd(Boot)
   }
-  SShD.Results <- data.frame(Boot.SShD = SShD, SShD.SE = SShD.SE)
+  SShD.Results <- data.frame(SShD.Mean = SShD, SShD.SE = SShD.SE)
   if (!is.null(Size)) {
-    SShD.Results$Boot.SSD <- SSD
+    SShD.Results$SSD.Mean <- SSD
     SShD.Results$SSD.SE <- SSD.SE
   }
   SShD.Results
