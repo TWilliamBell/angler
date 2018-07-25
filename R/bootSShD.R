@@ -26,15 +26,9 @@ bootSShD <- function(Coords, Sex, Size = NULL, Zeroed = T) { ## Hoping to make t
     SexVec <- c(rep('f', nF), rep('m', nM))
     SShD <- SShDLM(CoordArray, SexVec, Zeroed)
     if (!is.null(Size)) { ## If you want to use log instead, one can easily adapt this function for your purposes.
-      SizeF <- mean(Size[BootF])
-      SizeM <- mean(Size[BootM])
-      if (SizeF>=SizeM) {
-        SSD <- SizeF/SizeM - 1
+      SSD <- SSDLM(c(Size[FemaleIndices][BootF], Size[MaleIndices][BootM], SexVec)
+      return(list(SShD = SShD, SSD = SSD))
       }
-      else if (SizeM>SizeF) {
-        SSD <- -(SizeM/SizeF - 1)
-      }
-    return(list(SShD = SShD, SSD = SSD))
     }
     SShD
   }
