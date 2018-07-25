@@ -8,9 +8,9 @@
 #'
 #' @export
 
-StratSShDSSDwSE <- function(Coords, Sex, Size, Strata, rep = 1000) {
+StratSShDSSDwSE <- function(Coords, Sex, Size, Strata, rep = 1000, print.progress = T) {
   ## Does SShD and SSD bootstraps
-  SShD <- StratSShDBoot(Coords, Sex, Strata, rep)
+  SShD <- StratSShDBoot(Coords, Sex, Strata, rep = rep, print.progress = print.progress)
   SSD <- StratSSDBoot(Size, Sex, Strata, rep)
   Results <- data.frame(Factors = SShD$Factors, SShD.Mean = SShD$SShD.Mean, SShD.SE = SShD$SShD.SE, SSD.Mean = SSD$SSD.Mean, SSD.SE = SSD$SSD.SE)
   Results
