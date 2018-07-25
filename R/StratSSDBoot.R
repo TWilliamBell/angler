@@ -7,7 +7,7 @@
 #'
 #' @export
 
-StratSSDBoot <- function(Size, Sex, Strata, rep = 1000, log = NULL, ...) {
+StratSSDBoot <- function(Size, Sex, Strata, rep = 1000, log = F, ...) {
   ## Does stratified bootstraps for SSD
   Strata <- as.factor(Strata)
   Levels <- levels(Strata)
