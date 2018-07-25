@@ -14,7 +14,7 @@ SShDFunc(Coords, Sex, Zeroed = TRUE)
 \item{Zeroed}{a logical value stating whether you wish to correct the SShD for the variation among individuals regardless of sex (defaults to TRUE)}
 }
 \description{
-This function directly calculates SShD.
+This function directly calculates SShD.  However it may be a poor estimator for unbalanced designs where there are more of one sex than the other, SShDLM() is more robust.
 }
 \examples{
 SShDFunc(Coords, Sex, Zeroed = TRUE)
