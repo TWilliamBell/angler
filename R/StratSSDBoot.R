@@ -13,11 +13,13 @@ StratSSDBoot <- function(Size, Sex, Strata, rep = 1000) {
   Levels <- levels(Strata)
   n <- nlevels(Strata)
   SE <- rep(NA_real_, n)
+  M <- rep(NA_real_, n)
   for (i in 1:n) {
     level <- Levels[i]
     SSDBooted <- bootSSD(Size = Size[Strata == level], Sex = Sex[Strata == level], rep)
     SE[i] <- sd(SSDBooted$t)
+    M[i] <- mean(SSDBooted$t)
   }
-  Results <- data.frame(Factors = Levels, SSD.SE = SE)
+  Results <- data.frame(Factors = Levels, SSD.Mean = M, SSD.SE = SE)
   Results
 }
