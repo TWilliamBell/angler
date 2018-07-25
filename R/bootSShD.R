@@ -28,8 +28,8 @@ bootSShD <- function(Coords, Sex, Size = NULL, Zeroed = T) { ## Hoping to make t
     if (!is.null(Size)) { ## If you want to use log instead, one can easily adapt this function for your purposes.
       SSD <- SSDLM(c(Size[FemaleIndices][BootF], Size[MaleIndices][BootM], SexVec)
       return(list(SShD = SShD, SSD = SSD))
-      }
-    }
-    SShD
+     }
+   }
+   SShD
   }
 }
