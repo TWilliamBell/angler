@@ -23,7 +23,7 @@ StratSSD <- function(Strata, Size, Sex, Log = FALSE, ...) {
     else if (Log == TRUE) {
       SSDs[i] <- SSDLog(Size[Strata == level], Sex[Strata == level], ...)
     }
-    else {warning("Invalid Log argument, must be T/F.")}
+    else {stop("Invalid Log argument, must be T/F.")}
   }
   StratSSD <- data.frame(Factors = Levels, SSD = SSDs)
   StratSSD
