@@ -13,11 +13,13 @@ StratSShDBoot <- function(Coords, Sex, NonSexFactor, rep = 1000) {
   Levels <- levels(NonSexFactor)
   n <- nlevels(NonSexFactor)
   SE <- rep(NA_real_, n)
+  M <- rep(NA_real_, n)
   for (i in 1:n) {
     level <- Levels[i]
     SShDBooted <- bootSShDLM(Coords = Coords[NonSexFactor == level, , drop = F], Sex = Sex[NonSexFactor == level], rep)
     SE[i] <- sd(SShDBooted$t)
+    M[i] <- mean(SShDBooted$t)
   }
-  Results <- data.frame(Factors = Levels, SShD.SE = SE)
+  Results <- data.frame(Factors = Levels, SShD.Mean = M, SShD.SE = SE)
   Results
 }
