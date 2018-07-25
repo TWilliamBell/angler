@@ -1,6 +1,6 @@
 #'  @export
 
-oldbootSShD <- function(Coords, Sex, Size = NULL, Zeroed = T) { ## Hoping to make this a hidden function
+OldbootSShD <- function(Coords, Sex, Size = NULL, Zeroed = T) { ## Hoping to make this a hidden function
   Female <- as.character(Sex)=="f"
   Male <- as.character(Sex)=="m" ## If you are sure your sex vector will always be formatted correctly, !Female might be marginally faster
   n <- length(Sex)
