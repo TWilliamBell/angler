@@ -26,7 +26,7 @@ bootSShD <- function(Coords, Sex, Size = NULL, Zeroed = T) { ## Hoping to make t
     SexVec <- c(rep('f', nF), rep('m', nM))
     SShD <- SShDLM(CoordArray, SexVec, Zeroed)
     if (!is.null(Size)) { ## If you want to use log instead, one can easily adapt this function for your purposes.
-      SSD <- SSDLM(c(Size[FemaleIndices][BootF], Size[MaleIndices][BootM]), SexVec)
+      SSD <- SSDLM(c(Size[BootF], Size[BootM]), SexVec)
       return(list(SShD = SShD, SSD = SSD))
      }
    }
