@@ -8,6 +8,7 @@
 #'
 #' @examples
 #' euclidean(c(1,2,3.2))
+
 euclidean <- function(vector) {
   (sum(vector^2))^0.5
 }
