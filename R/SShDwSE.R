@@ -1,7 +1,7 @@
 #' @export
 
-SShDwSE <- function(Coords, Sex, Size = NULL, rep = 1000, ...) {
-  Boot <- replicate(rep, bootSShD(Coords, Sex, Size, ...))
+OldSShDwSE <- function(Coords, Sex, Size = NULL, rep = 1000, ...) {
+  Boot <- replicate(rep, OldbootSShD(Coords, Sex, Size, ...))
   if (!is.null(Size)) {
     SShD <- mean(unlist(Boot[1, ]))
     SShD.SE <- sd(unlist(Boot[1, ]))
