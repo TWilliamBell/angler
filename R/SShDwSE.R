@@ -1,16 +1,4 @@
-#' Calculate the Standard Error of the SShD (and SSD)
-#'
-#' The SShD or SSD is worth very little without a measure of error, this function runs a bootstrap in order to get a value for their standard errors.
-#'
-#' @param Coords Two-dimensional array of coordinates from geometric morphometric analysis (see two.d.array() in geomorph for correct formatting)
-#' @param Sex A character or factor vector recording sex for each individual as 'm' or 'f'
-#' @param Size Optional size argument, a numerical vector giving the size of each individual as a scalar quantity
-#' @param rep The number of times that you wish the resampling to be done, defaults to 1000 but more is better except for very small samples.
-#'
 #' @export
-#'
-#' @examples
-#' SShDwSE(Coords, Sex, Size, rep = 10000, Zeroed = FALSE)
 
 SShDwSE <- function(Coords, Sex, Size = NULL, rep = 1000, ...) {
   Boot <- replicate(rep, bootSShD(Coords, Sex, Size, ...))
