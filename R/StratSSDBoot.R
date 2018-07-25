@@ -7,7 +7,7 @@
 #'
 #' @export
 
-StratSSDBoot <- function(Size, Sex, Strata, rep = 1000) {
+StratSSDBoot <- function(Size, Sex, Strata, rep = 1000, ...) {
   ## Does stratified bootstraps for SSD
   Strata <- as.factor(Strata)
   Levels <- levels(Strata)
@@ -16,7 +16,7 @@ StratSSDBoot <- function(Size, Sex, Strata, rep = 1000) {
   M <- rep(NA_real_, n)
   for (i in 1:n) {
     level <- Levels[i]
-    SSDBooted <- bootSSD(Size = Size[Strata == level], Sex = Sex[Strata == level], rep)
+    SSDBooted <- bootSSD(Size = Size[Strata == level], Sex = Sex[Strata == level], rep, ...)
     SE[i] <- sd(SSDBooted$t)
     M[i] <- mean(SSDBooted$t)
   }
