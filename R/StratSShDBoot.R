@@ -7,7 +7,7 @@
 #'
 #' @export
 
-StratSShDBoot <- function(Coords, Sex, NonSexFactor, rep = 1000) { 
+StratSShDBoot <- function(Coords, Sex, NonSexFactor, rep = 1000, print.progress = T) { 
   ## Does stratified bootstraps for SShD
   NonSexFactor <- as.factor(NonSexFactor)
   Levels <- levels(NonSexFactor)
@@ -19,6 +19,9 @@ StratSShDBoot <- function(Coords, Sex, NonSexFactor, rep = 1000) {
     SShDBooted <- bootSShDLM(Coords = Coords[NonSexFactor == level, , drop = F], Sex = Sex[NonSexFactor == level], rep)
     SE[i] <- sd(SShDBooted$t)
     M[i] <- mean(SShDBooted$t)
+    if (isTRUE(print.progress)) {
+      PrintProgress(i, n)
+    }
   }
   Results <- data.frame(Factors = Levels, SShD.Mean = M, SShD.SE = SE)
   Results
