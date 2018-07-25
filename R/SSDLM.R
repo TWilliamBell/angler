@@ -12,7 +12,7 @@
 
 SSDLM <- function(Size, Sex) {
   Data <- data.frame(Size, Sex)
-  DiffFM <- lm(Size ~ Sex, Data)$coef[2]
+  DiffFM <- lm(Size ~ 1 + Sex, Data)$coef[2]
   FSize <- mean(Size[Sex == 'f'])
   MSize <- mean(Size[Sex == 'm'])
   if (FSize >= MSize & DiffFM >= 0) {
