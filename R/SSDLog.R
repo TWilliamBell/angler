@@ -12,7 +12,7 @@
 #' @examples
 #' SSDLog(Size, Sex)
 
-SSDLog <- function(Size, Sex, Base = exp(1), positiveF = F) {
+SSDLog <- function(Size, Sex, Base = exp(1), positiveM = F) {
   Sex <- as.character(Sex)
 
   if (!is.element("m", Sex) | !is.element("f", Sex)) {
@@ -22,9 +22,10 @@ SSDLog <- function(Size, Sex, Base = exp(1), positiveF = F) {
 
   MSize <- mean(Size[Sex == 'm'])
   FSize <- mean(Size[Sex == 'f'])
-  if (!isTRUE(positiveF)) {
+  if (isTRUE(positiveM)) {
     SSD <- log((MSize/FSize), base = Base)
   }
-  else (SSD <- log((FSize/MSize), base = Base))
+  else if (isFALSE(positiveM)) {SSD <- log((FSize/MSize), base = Base)}
+  else {stop("positiveM argument must be a logical value.")}
   SSD
 }
