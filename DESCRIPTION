@@ -1,4 +1,4 @@
-Package: angleR
+Package: angler
 Title: calculate sexual shape and size dimorphism from landmark data
 Version: 0.0.0.9000
 Authors@R: person("T William", "Bell", email = "ollyoxenfree1997@yahoo.ca", role = c("aut", "cre"))
