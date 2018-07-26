@@ -22,7 +22,7 @@ SShDFunc <- function(Coords, Sex, Zeroed = TRUE) {
   MData <- Coords[as.character(Sex)=='m', , drop = FALSE]
 
   ConsensusF <- colMeans(FData) ## Average male and female coordinates
-  ConsensusM <- colMeans(MData, 2, mean)
+  ConsensusM <- colMeans(MData)
 
   DiffFM <- ConsensusF-ConsensusM
 
