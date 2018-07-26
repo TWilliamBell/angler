@@ -4,8 +4,9 @@ SSDBoot <- function(Sex, Indices, Size, log = F, ...) { ## Bootstrap statistic f
   if (isFALSE(log)) {
     SSD <- SSDLM(Size[Indices], Sex[Indices])
   }
-  else {
+  else if (isTRUE(log)) {
     SSD <- SSDLog(Size[Indices], Sex[Indices], ...)
   }
+  else {stop("log argument must be a logical value.")}
   SSD
 }
