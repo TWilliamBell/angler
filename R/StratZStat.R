@@ -14,7 +14,7 @@ StratZStat <- function(Strata, Coords, Sex) {
     level <- Levels[i]
     StratCoord <- Coords[Strata == level, , drop = F]
     StratSex <- Sex[Strata == level]
-    Results[i] <- geomorphZStat(StratCoord, StratSex)
+    Results[i] <- ZStat(StratCoord, StratSex)
   }
   Results
 }
