@@ -14,7 +14,7 @@ StratPSDShape <- function(Strata, Coords, Sex) {
     level <- Levels[i]
     StratCoord <- Coords[Strata == level, , drop = F]
     StratSex <- Sex[Strata == level]
-    Results[i] <- PooledSDShape(StratCoord, StratSex)
+    Results[i] <- PSDShape(StratCoord, StratSex)
   }
   Results
 }
