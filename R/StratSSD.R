@@ -1,8 +1,8 @@
 #' Within-Group SSD Calculation
 #'
-#' @param Strata A character or factor vector giving the factor by which we wish to divide individuals into groups before calculating SSD
+#' @param Strata A character or factor vector giving the factor by which we wish to divide individuals into groups before calculating SSD, individuals must be in the same order as the Size vector
 #' @param Size A numerical vector giving the size of each individual as a scalar quantity
-#' @param Sex A character or factor vector recording sex for each individual as 'm' or 'f'
+#' @param Sex A character or factor vector recording sex for each individual as 'm' or 'f', individuals must be in the same order as the Size vector
 #' @param Log Defaults to FALSE, in which case you use the Lovich and Gibbons SDI to calculate SSD, if changed to TRUE you use the log ratio.
 #' @param ... If Log is TRUE, then you may pass arguments to the SSDLog function this way.
 #'
