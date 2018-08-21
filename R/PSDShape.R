@@ -12,7 +12,6 @@ PSDShape <- function(Coords, Sex) {
     return(NA_real_)
     warning("No data found for at least one sex.")
   }
-  Sex <- as.factor(Sex)
   Data <- data.frame(Sex)
   Data$Coords <- Coords
   LM <- lm(Coords ~ 1 + Sex, data = Data)
