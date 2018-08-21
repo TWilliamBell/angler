@@ -10,7 +10,7 @@
 #'
 #' @export
 
-StratSShDwSE <- function(Coords, Sex, Size, Strata, rep = 1000, print.progress = T, logSSD = F, ...) {
+StratSShDSSDwSE <- function(Coords, Sex, Size, Strata, rep = 1000, print.progress = T, logSSD = F, ...) {
   ## Does SShD and SSD bootstraps
   SShD <- StratSShDBoot(Coords, Sex, Strata, rep = rep, print.progress = print.progress)
   SSD <- StratSSDBoot(Size, Sex, Strata, rep, log = logSSD, ...)
