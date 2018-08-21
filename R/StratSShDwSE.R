@@ -16,7 +16,7 @@ StratSShDwSE <- function(Coords, Sex, Size = NULL, Strata, rep = 1000, print.pro
   Results <- data.frame(Factors = SShD$Factors, SShD.Mean = SShD$SShD.Mean, SShD.SE = SShD$SShD.SE)
   if (!is.null(Size)) {
     SSD <- StratSSDBoot(Size, Sex, Strata, rep, log = logSSD, ...)
-    Results$SSD.Mean <- SSD$SSD.Mean, 
+    Results$SSD.Mean <- SSD$SSD.Mean
     Results$SSD.SE <- SSD$SSD.SE
   }
   Results
