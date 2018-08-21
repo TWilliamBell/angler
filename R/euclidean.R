@@ -7,7 +7,8 @@
 #' @param vector numerical vector of numbers
 #'
 #' @examples
-#' euclidean(c(1,2,3.2))
+#' all.equal(euclidean(c(3, 4)), 5)
+#' > TRUE
 
 euclidean <- function(vector) {
   (sum(vector^2))^0.5
