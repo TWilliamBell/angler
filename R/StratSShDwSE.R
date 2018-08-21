@@ -1,5 +1,7 @@
 #' Calculate stratified Standard Errors for SShD and SSD
 #'
+#' The SShD mean is the raw Procrustes Distance without adjusting by a permutation test (the default for SShD calculations in this package performs the Permutation Test), and the SShD standard error is the standard error of that estimator.
+#'
 #' @param Coords Two-dimensional array of coordinates from geometric morphometric analysis (see two.d.array() in geomorph for correct formatting)
 #' @param Sex A character or factor vector recording sex for each individual as 'm' or 'f'
 #' @param Size A numerical vector giving the size of each individual as a scalar quantity
