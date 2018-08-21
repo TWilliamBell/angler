@@ -3,7 +3,7 @@
 #' Calculates the SDI measure of sexual size dimorphism (Lovich and Gibbons 1992).  In order to calculate the log ratio instead use SSDLog.  Compared to SSDFunc, this is less susceptible to unbalanced designs.
 #'
 #' @param Size A numerical vector giving the size of each individual as a scalar quantity
-#' @param Sex character or factor vector of individual's sexes given as 'f' for female and 'm' for male
+#' @param Sex character or factor vector of individual's sexes given as 'f' for female and 'm' for male, individuals should be in the same order as the Size vector
 #'
 #' @export
 #'
