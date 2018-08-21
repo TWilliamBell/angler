@@ -9,6 +9,6 @@
 #' @export
 
 StratDShape <- function(Strata, Coords, Sex) {
-  Results <- StratSShD(Coords, Strata, Sex)$SShD/StratPSD(Strata, Coords, Sex)
+  Results <- StratSShD(Coords, Strata, Sex)$SShD/StratPSDShape(Strata, Coords, Sex)
   Results
 }
