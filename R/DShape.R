@@ -9,7 +9,7 @@
 
 DShape <- function(Coords, Sex) {
   SShD <- SShDLM(Coords, Sex, Zeroed = T)
-  PSD <- PooledSDShape(Coords, Sex)
+  PSD <- PSDShape(Coords, Sex)
   if (PSD == 0) {
     warning("Pooled standard deviation is zero.  Sample size too small?")
     return(NA_real_)
