@@ -2,7 +2,7 @@
 #'
 #' This function directly calculates SShD.  However it may be a poor estimator for unbalanced designs where there are more of one sex than the other, SShDLM() is more robust.
 #' @param Coords Two-dimensional array of coordinates from geometric morphometric analysis (see two.d.array() in geomorph for correct formatting)
-#' @param Sex A character or factor vector recording sex for each individual as 'm' or 'f'
+#' @param Sex A character or factor vector recording sex for each individual as 'm' or 'f', individuals should be in the same order as the rows of the Coords
 #' @param Zeroed a logical value stating whether you wish to correct the SShD for the variation among individuals regardless of sex (defaults to TRUE)
 #'
 #' @export
