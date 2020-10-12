@@ -1,6 +1,6 @@
 Package: angler
 Title: calculate sexual shape and size dimorphism from landmark data
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person("T William", "Bell", email = "ollyoxenfree1997@yahoo.ca", role = c("aut", "cre"))
 Description: Geometric morphometric data may be processed through the geomorph package, and that package has functionality for testing the significance of sexual dimorphism.  However the more relevant value for all sorts of analysis is the actual value of SShD and SSD, and this package is designed to calculate those.  I would like to credit Hilary Parker for an accessible introduction to making R packages (https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) and Ian Dworkin for introducing me to the statistical tools used in geometric morphometrics & proof reading my work.
 Depends: R (>= 3.3.3)
